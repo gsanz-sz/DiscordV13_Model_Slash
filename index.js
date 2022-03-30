@@ -1,16 +1,10 @@
-const { Collection, MessageEmbed } = require("discord.js");
-const { token } = require("./config.json");
-const fs = require("fs");
-const cron = require("cron");
+const { Client, Collection } = require('discord.js');
+const client = new Client({intents: 32767});
+const { token } = require('./config.json');
 
-const Client = require("./src/Structures/Client");
+client.commands = new Collection();
 
-const client = new Client({
-  intents: 32767,
-});
+require("./Handlers/Events")(client);
+require("./Handlers/Commands")(client);
 
-client.once("ready", () => {
-  console.log(`[READY]: ${client.user.tag} is ready`);
-});
-
-client.login(token);
+client.login(token)

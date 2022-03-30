@@ -1,7 +1,7 @@
 {
-  "name": "firezin",
+  "name": "discord_model_v13_slash",
   "version": "1.0.0",
-  "description": "Bot de registro de assinaturas mensais",
+  "description": "inicialização de um bot com discord.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/gsanz-sz/FirezinAcademy#readme",
   "dependencies": {
+    "ascii-table": "^0.0.9",
     "cron": "^1.8.2",
-    "discord.js": "^13.6.0"
+    "discord.js": "^13.6.0",
+    "glob": "^7.2.0"
   }
 }
