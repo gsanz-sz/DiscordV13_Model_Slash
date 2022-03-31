@@ -2,10 +2,10 @@
   "name": "discord_model_v13_slash",
   "version": "1.0.0",
   "description": "inicialização de um bot com discord.js",
-  "main": "index.js",
+  "main": "./Structures/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node ./Structures/index.js"
   },
   "repository": {
     "type": "git",

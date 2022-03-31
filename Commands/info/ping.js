@@ -1,13 +1,21 @@
-const { CommandInteraction } = require("discord.js");
+const { CommandInteraction, MessageActionRow, MessageButton } = require("discord.js");
 
 module.exports = {
   name: "ping",
   description: "Ping",
-  permissions: "ADMasssINISTRATOR",
+  permission: "ADMINISTRATOR",
   /**
    * @param {CommandInteraction} interaction
    */
   execute(interaction) {
-      interaction.reply({content: "Pong!"});
+
+    const row = new MessageActionRow();
+    row.addComponents(
+      new MessageButton()
+      .setCustomId("Test")
+      .setLabel("Test")
+      .setStyle("SUCCESS")
+    )
+    interaction.reply({ components: [row] });
   },
 };
