@@ -1,5 +1,6 @@
 const { Perms } = require("../Validation/Permissions");
 const { Client } = require("discord.js");
+const { guildID } = require('../config.json');
 
 /**
  * @param {Client} client
@@ -47,7 +48,7 @@ module.exports = async (client, PG, Ascii) => {
   // PERMISSION CHECK //
 
   client.on("ready", async () => {
-    const MainGuild = await client.guilds.cache.get("715224464660627476");
+    const MainGuild = await client.guilds.cache.get(guildID);
 
     MainGuild.commands.set(CommandsArray).then(async (command) => {
       const Roles = (commandName) => {
